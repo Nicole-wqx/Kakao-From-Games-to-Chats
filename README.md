@@ -7,7 +7,7 @@ This project is interested in **how the adoption of a popular gaming app will af
 
 ```mermaid
 graph TD
-A[Anipang Adoption (Control/Treated)]
+A[Anipang Adoption - Control/Treated]
 B[Kakao Talk & Story Usage]
 A ==Control: Kakao Game Usage, Non-Kakao App Usage==> B
 ```
