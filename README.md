@@ -24,10 +24,9 @@ After the PSM, we saw substantial improvement in the statistics from raw to matc
 
 
 ## STEP 2️⃣ Panel DID Regression Model 1
-$$
-t_{\text{kakao\_talk}} = \beta_0 + \alpha_i (\text{panel\_id})_i + \delta_t (\text{week}) + \beta_1 \cdot ii + 
-\beta_2 \cdot t_{\text{kakao\_story}} + \beta_3 \cdot t_{\text{kakao\_game}} + \beta_4 \cdot t_{\text{non\_kakao}} + u_{it}
-$$
+
+$$ t_{\text{kakao\_talk}} = \beta_0 + \alpha_i (\text{panel\_id})_i + \delta_t (\text{week}) + \beta_1 \cdot ii + 
+\beta_2 \cdot t_{\text{kakao\_story}} + \beta_3 \cdot t_{\text{kakao\_game}} + \beta_4 \cdot t_{\text{non\_kakao}} + u_{it} $$
 
 - panel_id: unit fixed effect
 - week: time fixed effect
@@ -45,10 +44,9 @@ However, the coefficients of Kakao Story usage are significant, which means the 
 
 
 ## STEP 3️⃣ Panel DID Regression Model 2
-$$
-t_{\text{kakao\_story}} = \beta_0 + \alpha_i (\text{panel\_id})_i + \delta_t (\text{week}) + \beta_1 \cdot ii +
-\beta_2 \cdot t_{\text{kakao\_talk}} + \beta_3 \cdot t_{\text{kakao\_game}} + \beta_4 \cdot t_{\text{non\_kakao}} + u_{it}
-$$
+
+$$ t_{\text{kakao\_story}} = \beta_0 + \alpha_i (\text{panel\_id})_i + \delta_t (\text{week}) + \beta_1 \cdot ii +
+\beta_2 \cdot t_{\text{kakao\_talk}} + \beta_3 \cdot t_{\text{kakao\_game}} + \beta_4 \cdot t_{\text{non\_kakao}} + u_{it} $$
 
 ![PSM](image/dummy2.png)
 
