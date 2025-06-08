@@ -24,8 +24,10 @@ After the PSM, we saw substantial improvement in the statistics from raw to matc
 
 
 ## STEP 2️⃣ Panel DID Regression Model 1
-t_kakao_talk = β0 + αi (panel_id)i + δt (week) + **β1ii** +
-                                         β2 t_kakao_story + β3 t_kakao_game + β4 t_non_kakao + uit
+$$
+t_{\text{kakao\_talk}} = \beta_0 + \alpha_i (\text{panel\_id})_i + \delta_t (\text{week}) + \beta_1 \cdot ii + 
+\beta_2 \cdot t_{\text{kakao\_story}} + \beta_3 \cdot t_{\text{kakao\_game}} + \beta_4 \cdot t_{\text{non\_kakao}} + u_{it}
+$$
 
 - panel_id: unit fixed effect
 - week: time fixed effect
@@ -39,18 +41,20 @@ In ten models using ten different PSM groups, the coefficients of treatment vari
 
 However, the coefficients of Kakao Story usage are significant, which means the usage time of Kakao Story has a siginificantly positive impact on the usage time of Kakao Talk.
 
-**Result**: The adoption of Anipang ***DOES NOT have a significant impact*** on the usage time of Kakao Talk at very early adoption stage (first week). 
+💡**Result**: The adoption of Anipang ***DOES NOT have a significant impact*** on the usage time of Kakao Talk at very early adoption stage (first week). 
 
 
 ## STEP 3️⃣ Panel DID Regression Model 2
-t_kakao_story = β0 + αi (panel_id)i + δt (week) + **β1ii** +
-                                         β2 t_kakao_talk + β3 t_kakao_game + β4 t_non_kakao + uit
+$$
+t_{\text{kakao\_story}} = \beta_0 + \alpha_i (\text{panel\_id})_i + \delta_t (\text{week}) + \beta_1 \cdot ii +
+\beta_2 \cdot t_{\text{kakao\_talk}} + \beta_3 \cdot t_{\text{kakao\_game}} + \beta_4 \cdot t_{\text{non\_kakao}} + u_{it}
+$$
 
 ![PSM](image/dummy2.png)
 
 In ten models using ten different PSM groups, the coefficients of treatment variable are all insignificant at 5% significance level. The coefficients of kakao talk usage provide the same result, which means an increase in usage time of Kakao Talk will not lead to an increase in the usage time of Kakao Story.
 
-**Result**: The adoption of Anipang ***DOES NOT have a significant impact*** on the usage time of Kakao Story at very early adoption stage (first week). 
+💡**Result**: The adoption of Anipang ***DOES NOT have a significant impact*** on the usage time of Kakao Story at very early adoption stage (first week). 
 
 ## STEP 4️⃣ Conclusion
 Despite Anipang’s viral success, we found no significant immediate increase in the usage time of Kakao Talk (communication) or Kakao Story (social networking). This suggests that viral app adoption does not necessarily lead to an instant rise in usage of other apps within the same platform ecosystem.
